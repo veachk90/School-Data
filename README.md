@@ -1,1 +1,17 @@
-# School-Data
+### School-Data
+#### Objectives
+The goal of this project was to provide a report consisting of analyses for various metrics and relationships in the available data for local schools. Primarily, we wanted to see which schools were performing well and which were not, measured by test scores in math and in reading. These metrics were compared among both public and charter schools, individual schools, and grade levels. 
+
+#### Preparation
+Before making any comparisons or finding relationships in the data, I first had to prepare the data to fit the tools I have for analysis. Primarily, I planned to use Python with Pandas. This would allow me to create a dataframe of the CSV file provided, which in turn would allow me to quickly organize the data and make use of the various methods Pandas provides for operating with dataframes. This preparation included dropping any rows with incomplete data and dropping duplicate rows while maintaining the originals. In this case, doing so did not likely result in meaningful changes to the data due to the relatively low volume of rows that were dropped. Finally, the column for student grades came as an object data type in the dataframe. To change it to an integer, which would prove to be more useful throughout the analysis, I had to drop the "th" suffix from each value, then convert the data type to int. Once this was done, I was ready to start.
+
+![Preparing the data](https://github.com/veachk90/School-Data/blob/main/Data_Preparation1.png)
+![Preparing the data](https://github.com/veachk90/School-Data/blob/main/Data_Preparation2.png)
+
+#### Initial Analysis
+Often, the first analysis of a set of data is to review the summary statistics. Consisting of mean and standard deviation, as wells as minimum and maximum values and the main percentiles, summary statistics provide a quick overview of the data's distribution. The first thing I noticed in the summary statistics was that the mean and median scores for both reading and math were very close to each other, meaning that the data was fairly normally distributed. They also showed that reading scores tended to be about 8 points higher than math scores. Finally, I noticed that the difference in budget allocation between the maximum score values and the minimum score values was about $180,000. It could be that this difference indicates a correlation between budget and test scores, but showing this direct relationship is beyond the scope of this analysis.
+
+#### Key Findings
+One of the most meaningful points of interest I noticed was when test scores between public and charter schools were compared. Mean readings scores were very similar, while charter schools showed an increase of 4 points over public schools in math scores. Along with this, public schools showed about $40,000 in additional funding over the mean of the charter schools. Further investigation here may show that charter schools are able to use their resources more efficiently for math education, though again, this is outside of the scope of this report. Finally, a noticable trend exists that shows a decrease in math scores as grade level increases. That is, freshman have a higher mean math score than seniors, and they represent the highest-performing grade level. Because this trend exists in both public and charter schools,, it is difficult to determine the factors that create this trend. This is especially confounding, since budget allocations for both types of schools tend to increase funding slightly with grade level. 
+![Key findings](https://github.com/veachk90/School-Data/blob/main/Key_Findings1.png)
+![Key findings](https://github.com/veachk90/School-Data/blob/main/Key_Findings2.png)
